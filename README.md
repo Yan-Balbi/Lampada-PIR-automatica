@@ -11,7 +11,10 @@ Autores:
 - Yan Nascimento Balbi
 
 ## Esquema de ligação
-
+A imagem abaixo ilustra as ligações que deverão ser feitas entre os componentes eletrônicos.
+<div align-center="center"> 
+<img src="https://user-images.githubusercontent.com/98549537/260137295-e5dbdfe3-7967-4c7c-947e-7b43fd859bb9.png" width="700px" />
+</div>
 
 ## Ferramentas e dependências necessárias
 Antes de dar início ao projeto, é necessário instalar a IDE do Arduino
