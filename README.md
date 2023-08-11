@@ -14,7 +14,9 @@ Autores:
 Antes de dar início ao projeto, é necessário instalar a IDE do Arduino
 - [Arduino IDE](https://docs.arduino.cc/software/ide-v1/tutorials/Windows#download-the-arduino-software-ide)
 Após a instalação da IDE no canto superior esquerdo, acesse Arquivo>Preferências e no campo 'URLs Adicionais para Gerenciadores de Placas' insira os dois links e pressione 'ok' para finalizar:
-
+<div align-center="center"> 
+<img src="https://user-images.githubusercontent.com/98549537/260132167-c2c14c68-5f26-4f7a-b0d7-ea919f8b5b33.png" width="700px" />
+</div>
 - https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 Por fim, copie o código de Lâmpada2.0.ino e coloque dentro da IDE, e salve o projeto.
