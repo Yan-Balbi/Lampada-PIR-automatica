@@ -10,6 +10,9 @@ Autores:
 - Halisson José Soares da Rocha
 - Yan Nascimento Balbi
 
+## Esquema de ligação
+
+
 ## Ferramentas e dependências necessárias
 Antes de dar início ao projeto, é necessário instalar a IDE do Arduino
 - [Arduino IDE](https://docs.arduino.cc/software/ide-v1/tutorials/Windows#download-the-arduino-software-ide)
