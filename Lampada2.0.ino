@@ -1,49 +1,27 @@
-#include <NTPClient.h>
-#include <ESP8266WiFi.h>
-#include <WiFiUdp.h>
-
 #define PIR 2 
 #define rele 16
-#define botao 14
-int ac;
 
-
-int sensorState = 0;      // Variável para armazenar o estado do sensor
-int releState = LOW;       // Variável para armazenar o estado do LED
-unsigned long previousMillis = 0;  // Variável para armazenar o tempo de início do acionamento do LED
-const long interval = 5000; 
-
+int existe_movimento = 1;
+int estado_do_rele = LOW;
+unsigned long hora_que_acendeu_lampada = 0;
+const long periodo_aceso = 5000; 
 
 void setup(){
-  Serial.begin(9600);
   pinMode(rele, OUTPUT);
   pinMode(PIR, INPUT);
-  pinMode(botao, OUTPUT);
-
-
-  
-  
 }
 
 void loop() {
-  ac = digitalRead(PIR);
-  Serial.println(ac);
+  existe_movimento = digitalRead(PIR);
 
-  if(ac == 1){
+  if( existe_movimento == 1 ){
     digitalWrite(rele, LOW);
-    releState = HIGH;
-    previousMillis = millis();
+    estado_do_rele = HIGH;
+    hora_que_acendeu_lampada = millis();
   }
 
-  if(releState == HIGH && (millis() - previousMillis >= 5000)){
+  if( estado_do_rele == HIGH &&    (millis() - hora_que_acendeu_lampada >= periodo_aceso) ){
     digitalWrite(rele, HIGH);
-    releState = LOW;
-  }
-  
-   /*if( ac == 1 ){
-     digitalWrite(rele, LOW);
-     delay(2000);
-   }else{
-     digitalWrite(rele, HIGH);
-   }*/
- } 
+    estado_do_rele = LOW;
+  }   
+}
